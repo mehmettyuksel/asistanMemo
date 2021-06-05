@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="asistanModelStoreContainer" CdmEntityContainer="asistanEntities">
+    <EntitySetMapping Name="Tbl_Konusma">
+      <EntityTypeMapping TypeName="asistanModel.Tbl_Konusma">
+        <MappingFragment StoreEntitySet="Tbl_Konusma">
+          <ScalarProperty Name="Konusma_ID" ColumnName="Konusma_ID" />
+          <ScalarProperty Name="Konusma_Kayit" ColumnName="Konusma_Kayit" />
+          <ScalarProperty Name="Konusma_Tarih" ColumnName="Konusma_Tarih" />
+          <ScalarProperty Name="Konusma_Baslik" ColumnName="Konusma_Baslik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Not">
+      <EntityTypeMapping TypeName="asistanModel.Tbl_Not">
+        <MappingFragment StoreEntitySet="Tbl_Not">
+          <ScalarProperty Name="Not_ID" ColumnName="Not_ID" />
+          <ScalarProperty Name="Not_Baslik" ColumnName="Not_Baslik" />
+          <ScalarProperty Name="Not_Yazi" ColumnName="Not_Yazi" />
+          <ScalarProperty Name="Not_Tarih" ColumnName="Not_Tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tbl_Yazma">
+      <EntityTypeMapping TypeName="asistanModel.Tbl_Yazma">
+        <MappingFragment StoreEntitySet="Tbl_Yazma">
+          <ScalarProperty Name="Yazma_ID" ColumnName="Yazma_ID" />
+          <ScalarProperty Name="Yazma_Kayit" ColumnName="Yazma_Kayit" />
+          <ScalarProperty Name="Yazma_Tarih" ColumnName="Yazma_Tarih" />
+          <ScalarProperty Name="Yazma_Baslik" ColumnName="Yazma_Baslik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

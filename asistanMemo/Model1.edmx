@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="asistanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Tbl_Konusma">
+          <Key>
+            <PropertyRef Name="Konusma_ID" />
+          </Key>
+          <Property Name="Konusma_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Konusma_Kayit" Type="nvarchar(max)" />
+          <Property Name="Konusma_Tarih" Type="smalldatetime" />
+          <Property Name="Konusma_Baslik" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tbl_Not">
+          <Key>
+            <PropertyRef Name="Not_ID" />
+          </Key>
+          <Property Name="Not_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Not_Baslik" Type="nvarchar" MaxLength="50" />
+          <Property Name="Not_Yazi" Type="nvarchar(max)" />
+          <Property Name="Not_Tarih" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="Tbl_Yazma">
+          <Key>
+            <PropertyRef Name="Yazma_ID" />
+          </Key>
+          <Property Name="Yazma_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Yazma_Kayit" Type="nvarchar(max)" />
+          <Property Name="Yazma_Tarih" Type="smalldatetime" />
+          <Property Name="Yazma_Baslik" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="asistanModelStoreContainer">
+          <EntitySet Name="Tbl_Konusma" EntityType="Self.Tbl_Konusma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Not" EntityType="Self.Tbl_Not" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tbl_Yazma" EntityType="Self.Tbl_Yazma" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="asistanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Tbl_Konusma">
+          <Key>
+            <PropertyRef Name="Konusma_ID" />
+          </Key>
+          <Property Name="Konusma_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Konusma_Kayit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Konusma_Tarih" Type="DateTime" Precision="0" />
+          <Property Name="Konusma_Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tbl_Not">
+          <Key>
+            <PropertyRef Name="Not_ID" />
+          </Key>
+          <Property Name="Not_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Not_Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Not_Yazi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Not_Tarih" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Tbl_Yazma">
+          <Key>
+            <PropertyRef Name="Yazma_ID" />
+          </Key>
+          <Property Name="Yazma_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Yazma_Kayit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Yazma_Tarih" Type="DateTime" Precision="0" />
+          <Property Name="Yazma_Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="asistanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tbl_Konusma" EntityType="Self.Tbl_Konusma" />
+          <EntitySet Name="Tbl_Not" EntityType="Self.Tbl_Not" />
+          <EntitySet Name="Tbl_Yazma" EntityType="Self.Tbl_Yazma" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="asistanModelStoreContainer" CdmEntityContainer="asistanEntities">
+          <EntitySetMapping Name="Tbl_Konusma">
+            <EntityTypeMapping TypeName="asistanModel.Tbl_Konusma">
+              <MappingFragment StoreEntitySet="Tbl_Konusma">
+                <ScalarProperty Name="Konusma_ID" ColumnName="Konusma_ID" />
+                <ScalarProperty Name="Konusma_Kayit" ColumnName="Konusma_Kayit" />
+                <ScalarProperty Name="Konusma_Tarih" ColumnName="Konusma_Tarih" />
+                <ScalarProperty Name="Konusma_Baslik" ColumnName="Konusma_Baslik" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Not">
+            <EntityTypeMapping TypeName="asistanModel.Tbl_Not">
+              <MappingFragment StoreEntitySet="Tbl_Not">
+                <ScalarProperty Name="Not_ID" ColumnName="Not_ID" />
+                <ScalarProperty Name="Not_Baslik" ColumnName="Not_Baslik" />
+                <ScalarProperty Name="Not_Yazi" ColumnName="Not_Yazi" />
+                <ScalarProperty Name="Not_Tarih" ColumnName="Not_Tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tbl_Yazma">
+            <EntityTypeMapping TypeName="asistanModel.Tbl_Yazma">
+              <MappingFragment StoreEntitySet="Tbl_Yazma">
+                <ScalarProperty Name="Yazma_ID" ColumnName="Yazma_ID" />
+                <ScalarProperty Name="Yazma_Kayit" ColumnName="Yazma_Kayit" />
+                <ScalarProperty Name="Yazma_Tarih" ColumnName="Yazma_Tarih" />
+                <ScalarProperty Name="Yazma_Baslik" ColumnName="Yazma_Baslik" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

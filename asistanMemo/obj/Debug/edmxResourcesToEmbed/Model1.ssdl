@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="asistanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Tbl_Konusma">
+    <Key>
+      <PropertyRef Name="Konusma_ID" />
+    </Key>
+    <Property Name="Konusma_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Konusma_Kayit" Type="nvarchar(max)" />
+    <Property Name="Konusma_Tarih" Type="smalldatetime" />
+    <Property Name="Konusma_Baslik" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Tbl_Not">
+    <Key>
+      <PropertyRef Name="Not_ID" />
+    </Key>
+    <Property Name="Not_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Not_Baslik" Type="nvarchar" MaxLength="50" />
+    <Property Name="Not_Yazi" Type="nvarchar(max)" />
+    <Property Name="Not_Tarih" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="Tbl_Yazma">
+    <Key>
+      <PropertyRef Name="Yazma_ID" />
+    </Key>
+    <Property Name="Yazma_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Yazma_Kayit" Type="nvarchar(max)" />
+    <Property Name="Yazma_Tarih" Type="smalldatetime" />
+    <Property Name="Yazma_Baslik" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="asistanModelStoreContainer">
+    <EntitySet Name="Tbl_Konusma" EntityType="Self.Tbl_Konusma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Not" EntityType="Self.Tbl_Not" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tbl_Yazma" EntityType="Self.Tbl_Yazma" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

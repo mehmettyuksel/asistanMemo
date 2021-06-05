@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="asistanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tbl_Konusma">
+    <Key>
+      <PropertyRef Name="Konusma_ID" />
+    </Key>
+    <Property Name="Konusma_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Konusma_Kayit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Konusma_Tarih" Type="DateTime" Precision="0" />
+    <Property Name="Konusma_Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Tbl_Not">
+    <Key>
+      <PropertyRef Name="Not_ID" />
+    </Key>
+    <Property Name="Not_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Not_Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Not_Yazi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Not_Tarih" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Tbl_Yazma">
+    <Key>
+      <PropertyRef Name="Yazma_ID" />
+    </Key>
+    <Property Name="Yazma_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Yazma_Kayit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Yazma_Tarih" Type="DateTime" Precision="0" />
+    <Property Name="Yazma_Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="asistanEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tbl_Konusma" EntityType="Self.Tbl_Konusma" />
+    <EntitySet Name="Tbl_Not" EntityType="Self.Tbl_Not" />
+    <EntitySet Name="Tbl_Yazma" EntityType="Self.Tbl_Yazma" />
+  </EntityContainer>
+</Schema>
